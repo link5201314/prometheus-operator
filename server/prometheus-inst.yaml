@@ -4,6 +4,10 @@ metadata:
   name: inst
   namespace: monitoring
 spec:
+  serviceAccountName: prometheus
+  serviceMonitorSelector:
+    matchLabels:
+      team: frontend
   resources:
     requests:
       memory: 400Mi
